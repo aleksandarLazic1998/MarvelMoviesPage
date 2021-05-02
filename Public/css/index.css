@@ -1,0 +1,8 @@
+body{
+    margin:0;
+    padding:0;
+}
+
+img.avatar{
+    border-radius: 50%;
+}
