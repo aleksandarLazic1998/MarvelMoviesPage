@@ -1,0 +1,91 @@
+@import '../others/colors';
+@import '../others/text';
+
+// .dropDownClick {
+//     display: block;
+// }
+
+
+// This scss partial was made for styling navbar
+.navigation {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    background: $mine-shaft;
+    color: $mercury;
+    justify-content: space-between;
+    align-items: center;
+
+    // Left Side of Navigation Bar
+    .left-ul-nav {
+        width: 400px;
+        list-style-type: none;
+        display: flex;
+
+
+        // Drop down menu styles
+        &-li {
+            .drop-down-div {
+                position: relative;
+                display: inline-block;
+
+                &-btn {
+                    background-color: $mine-shaft;
+                    color: $mercury;
+                    padding: 16px;
+                    font-size: 16px;
+                    border: none;
+                    cursor: pointer;
+                    border: none;
+
+                    &:hover {
+                        background-color: #646262;
+                    }
+                }
+                &-content {
+                    display: none;
+                    position: absolute;
+                    background-color: #f9f9f9;
+                    min-width: 160px;
+                    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                    z-index: 1;
+
+                    &-a {
+                        color: $mine-shaft;
+                        padding: 12px 16px;
+                        text-decoration: none;
+                        display: block;
+                        text-align: center;
+
+                        &:hover {
+                            background-color: #dbdada
+                        }
+                    }
+                }
+
+            }
+        }
+
+
+
+    }
+    
+
+    // Right Side of Navigation Bar
+    .right-ul-nav {
+        width: 200px;
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        justify-content: flex-end;
+
+        &-li {
+
+            &-a {
+                color: $mercury;
+                text-decoration: none;
+            }
+        }
+    }
+}
