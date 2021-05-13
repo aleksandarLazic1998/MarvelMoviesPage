@@ -4,6 +4,58 @@
   padding: 0;
 }
 
+body {
+  background-color: #E8E8E8;
+}
+
+@media screen and (max-width: 780px) {
+  .navigation-burger {
+    visibility: visible;
+    position: absolute;
+    top: 40px;
+    left: 30px;
+    width: 50px;
+    height: 2px;
+    background: white;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.7s ease-in-out;
+  }
+  .navigation-burger::before {
+    content: "";
+    background: white;
+    position: absolute;
+    top: -8px;
+    left: 10px;
+    width: 30px;
+    height: 2px;
+    transition: all 0.7s ease-in-out;
+  }
+  .navigation-burger::after {
+    content: "";
+    background: white;
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    width: 30px;
+    height: 2px;
+    transition: all 0.7s ease-in-out;
+  }
+  .navigation-burger.open {
+    transform: rotate(720deg);
+    background: transparent;
+  }
+  .navigation-burger.open::before {
+    transform: rotate(45deg) translate(4px, 8px);
+  }
+  .navigation-burger.open::after {
+    width: 28px;
+    transform: rotate(-45deg) translate(3px, -7px);
+  }
+  .navigation .left-ul-nav-li {
+    visibility: hidden;
+  }
+}
 .navigation {
   display: flex;
   width: 100%;
@@ -17,10 +69,14 @@
   width: 400px;
   list-style-type: none;
   display: flex;
+  align-self: center;
+}
+.navigation .left-ul-nav-li {
+  display: inline-block;
+  padding: 20px;
 }
 .navigation .left-ul-nav-li .drop-down-div {
   position: relative;
-  display: inline-block;
 }
 .navigation .left-ul-nav-li .drop-down-div-btn {
   background-color: #2E2E2E;
@@ -52,17 +108,34 @@
 .navigation .left-ul-nav-li .drop-down-div-content-a:hover {
   background-color: #dbdada;
 }
+.navigation .left-ul-nav input.search-bar {
+  display: inline-block;
+  padding: 20px;
+  font-size: 18px;
+  width: 250px;
+  height: 30px;
+  align-self: baseline;
+  cursor: pointer;
+  border-radius: 15px;
+}
 .navigation .right-ul-nav {
-  width: 200px;
+  width: 400px;
   list-style-type: none;
   display: flex;
   align-items: center;
   flex-grow: 1;
   justify-content: flex-end;
 }
+.navigation .right-ul-nav-li {
+  padding: 20px;
+}
 .navigation .right-ul-nav-li-a {
   color: #E8E8E8;
   text-decoration: none;
+}
+.navigation .right-ul-nav-li-img {
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
