@@ -1,10 +1,4 @@
 @import '../others/colors';
-@import '../others/text';
-
-// .dropDownClick {
-//     display: block;
-// }
-
 
 // This scss partial was made for styling navbar
 .navigation {
@@ -21,13 +15,15 @@
         width: 400px;
         list-style-type: none;
         display: flex;
-
+        align-self: center;
 
         // Drop down menu styles
         &-li {
+            display: inline-block;
+            padding: 20px;
+
             .drop-down-div {
                 position: relative;
-                display: inline-block;
 
                 &-btn {
                     background-color: $mine-shaft;
@@ -42,6 +38,7 @@
                         background-color: #646262;
                     }
                 }
+
                 &-content {
                     display: none;
                     position: absolute;
@@ -62,18 +59,25 @@
                         }
                     }
                 }
-
             }
         }
 
-
-
+        // Search Bar
+        input.search-bar {
+            display: inline-block;
+            padding: 20px;
+            font-size: 18px;
+            width: 250px;
+            height: 30px;
+            align-self: baseline;
+            cursor: pointer;
+            border-radius: 15px;
+        }
     }
-    
 
     // Right Side of Navigation Bar
     .right-ul-nav {
-        width: 200px;
+        width: 400px;
         list-style-type: none;
         display: flex;
         align-items: center;
@@ -81,11 +85,16 @@
         justify-content: flex-end;
 
         &-li {
-
+            padding:20px;
             &-a {
                 color: $mercury;
                 text-decoration: none;
             }
+            &-img{
+                border-radius: 50%;
+                cursor: pointer;
+            }
         }
     }
 }
+
