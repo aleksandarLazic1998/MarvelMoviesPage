@@ -1,0 +1,65 @@
+@import '../../others/functions';
+// Media queryes for screen under 780px
+@media screen and (max-width: 780px) {
+    .navigation {
+
+        // Span that make the left side of the navigation bar menu
+        &-burger {
+            visibility: visible;
+            position: absolute;
+            top: 40px;
+            left: 30px;
+            width: 50px;
+            height: 2px;
+            background: white;
+            cursor: pointer;
+            z-index: 1;
+            @include transition-ease;
+
+            &::before {
+                content: "";
+                background: white;
+                position: absolute;
+                top: -8px;
+                left: 10px;
+                width: 30px;
+                height: 2px;
+                @include transition-ease;
+            }
+
+            &::after {
+                content: "";
+                background: white;
+                position: absolute;
+                top: +8px;
+                left: 10px;
+                width: 30px;
+                height: 2px;
+                @include transition-ease;
+            }
+
+            // With JavaScript when the menu is open we are going to give it clas .open
+            &.open {
+                transform: rotate(720deg);
+                background: transparent;
+
+                &::before {
+                    transform: rotate(45deg) translate(4px, 8px);
+                }
+
+                &::after {
+                    width: 28px;
+                    transform: rotate(-45deg) translate(3px, -7px);
+                }
+            }
+        }
+
+
+        .left-ul-nav {
+
+            &-li {
+                visibility: hidden;
+            }
+        }
+    }
+}

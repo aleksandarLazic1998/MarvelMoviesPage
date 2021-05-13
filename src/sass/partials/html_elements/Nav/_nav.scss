@@ -1,4 +1,6 @@
-@import '../others/colors';
+@import '../../others/colors';
+@import '../Nav/media-for-nav';
+@import '../../others/functions';
 
 // This scss partial was made for styling navbar
 .navigation {
@@ -97,4 +99,3 @@
         }
     }
 }
-
