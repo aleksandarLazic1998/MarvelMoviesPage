@@ -1,3 +1,4 @@
+
 // NavBar DropDown Menu function
 function navBar() {
   const navBtn = document.getElementById('drop-down-nav-btn');
@@ -15,27 +16,30 @@ function navBar() {
   navBtn.addEventListener('click', showDropdown);
 }
 
-
 // This function will add class .open to a span.burger that will make iut to rotate it and other..
 function toggleMenuBar() {
   const burger = document.querySelector('.navigation-burger');
+  const li = document.querySelectorAll('.left-ul-nav-li');
+  
+
   let showMenu = false;
   burger.addEventListener('click', function () {
     if (!showMenu) {
       burger.classList.add('open');
+      li.forEach(liItem => liItem.classList.add('open'));
+      
 
       showMenu = true;
     } else {
 
       burger.classList.remove('open');
+      li.forEach(liItem => liItem.classList.remove('open'));
+     
+
       showMenu = false;
     }
   });
 }
-
-
-
-
 
 // This function was made to later refacturate it in another js fragment
 navBar();

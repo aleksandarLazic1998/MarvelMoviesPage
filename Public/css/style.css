@@ -9,6 +9,9 @@ body {
 }
 
 @media screen and (max-width: 780px) {
+  .navigation {
+    width: 100vw;
+  }
   .navigation-burger {
     visibility: visible;
     position: absolute;
@@ -52,8 +55,47 @@ body {
     width: 28px;
     transform: rotate(-45deg) translate(3px, -7px);
   }
+  .navigation .left-ul-nav {
+    display: flex;
+    position: relative;
+    z-index: 3;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    z-index: 300;
+    list-style-type: none;
+    transform: translateY(20%);
+    overflow: hidden;
+    transition: all 0.7s ease-in-out;
+    visibility: hidden;
+  }
+  .navigation .left-ul-nav.open {
+    visibility: visible;
+    transform: translateY(0%);
+  }
   .navigation .left-ul-nav-li {
     visibility: hidden;
+    transition: all 0.7s ease-in-out;
+    width: 100%;
+    border: 1px solid #E8E8E8;
+    align-self: center;
+    background: #2E2E2E;
+    transform: translateX(-1000%);
+    transition: all 0.7s ease-in-out;
+  }
+  .navigation .left-ul-nav-li.open {
+    visibility: visible;
+    transform: translateX(0%);
+  }
+  .navigation .left-ul-nav-li:nth-child(1) {
+    transition-delay: 0.35s;
+  }
+  .navigation .left-ul-nav-li:nth-child(2) {
+    transition-delay: 0.55s;
+  }
+  .navigation .left-ul-nav-li:nth-child(3) {
+    transition-delay: 0.75s;
   }
 }
 .navigation {
@@ -70,6 +112,7 @@ body {
   list-style-type: none;
   display: flex;
   align-self: center;
+  background-color: #2E2E2E;
 }
 .navigation .left-ul-nav-li {
   display: inline-block;
