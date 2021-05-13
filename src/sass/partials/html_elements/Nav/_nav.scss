@@ -87,12 +87,14 @@
         justify-content: flex-end;
 
         &-li {
-            padding:20px;
+            padding: 20px;
+
             &-a {
                 color: $mercury;
                 text-decoration: none;
             }
-            &-img{
+
+            &-img {
                 border-radius: 50%;
                 cursor: pointer;
             }
