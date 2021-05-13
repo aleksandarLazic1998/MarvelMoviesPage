@@ -1,8 +1,10 @@
 @import '../../others/functions';
+@import '../../others/colors';
+
 // Media queryes for screen under 780px
 @media screen and (max-width: 780px) {
     .navigation {
-
+    width:100vw;
         // Span that make the left side of the navigation bar menu
         &-burger {
             visibility: visible;
@@ -54,11 +56,49 @@
             }
         }
 
+        .left-ul-nav{
+            display: flex;
+            position: relative;
+            z-index: 3;
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            z-index: 300;
+            list-style-type: none;
+            transform: translateY(+20%);
+            overflow: hidden;
+            @include transition-ease;
+            visibility: hidden;
+            
 
-        .left-ul-nav {
+            &.open{
+                visibility: visible;
+                transform: translateY(0%);
+            }
 
-            &-li {
+            &-li{ 
                 visibility: hidden;
+                @include transition-ease;
+                width: 100%;
+                border:1px solid $mercury;
+                align-self: center;
+                background: $mine-shaft;
+                transform: translateX(-1000%);
+                @include transition-ease;
+               
+
+                &.open{
+                    visibility: visible;
+                    transform: translateX(0%);
+                }
+            }
+        }
+
+        @for $i from 1 through 3 {
+            .left-ul-nav-li:nth-child(#{$i}) {
+                // For each li element to ease in in to the page 
+                transition-delay: ($i * 0.2) + 0.15s;
             }
         }
     }
