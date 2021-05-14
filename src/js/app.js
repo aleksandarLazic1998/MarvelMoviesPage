@@ -1,4 +1,3 @@
-
 // NavBar DropDown Menu function
 function navBar() {
   const navBtn = document.getElementById('drop-down-nav-btn');
@@ -21,28 +20,35 @@ function toggleMenuBar() {
   const burger = document.querySelector('.navigation-burger');
   const li = document.querySelectorAll('.left-ul-nav-li');
   
-
   let showMenu = false;
   burger.addEventListener('click', function () {
     if (!showMenu) {
       burger.classList.add('open');
       li.forEach(liItem => liItem.classList.add('open'));
       
-
       showMenu = true;
     } else {
 
       burger.classList.remove('open');
       li.forEach(liItem => liItem.classList.remove('open'));
      
-
       showMenu = false;
     }
   });
 }
 
+// This Function set the year on the copyRigth span
+function changeYear(){
+  const year = document.getElementById('time');
+  let timeYear = new Date().getFullYear();
+  year.innerHTML = String(timeYear);
+
+}
+
+
 // This function was made to later refacturate it in another js fragment
 navBar();
-
 // For showing menu button
 toggleMenuBar()
+// For seting the year
+changeYear();
