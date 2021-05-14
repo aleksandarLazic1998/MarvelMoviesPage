@@ -1,18 +1,20 @@
 @import '../../others/colors';
 @import '../../others/text';
-.footer{
-    width:100vw;
-    height:40px;
+
+.footer {
+    width: 100vw;
+    height: 40px;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    position: absolute;
+    position: fixed;
     bottom: 0px;
-    right:0px;
+    right: 0px;
     background: $mine-shaft;
-    &-p{
+
+    &-p {
         color: white;
-        font-size: map-get($text_size, "normal" );
+        font-size: map-get($text_size, "normal");
         padding: 20px;
 
     }
