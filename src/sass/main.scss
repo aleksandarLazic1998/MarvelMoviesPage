@@ -1,4 +1,26 @@
 @import '../sass/partials/others/config';
 @import '../sass/partials/html_elements/Nav/nav';
+@import '../sass/partials/html_elements/header/header';
+@import '../sass/partials/html_elements/footer/footer';
+
+
+
+
+.container-grid{
+    display:grid;
+
+    .navigation{
+        grid-area: nav;
+    }
+    .header {
+        grid-area: header;
+    }
+    .main{
+        grid-area: header;
+    }
+    .footer{
+        grid-area:footer;
+    }
+}
 
 

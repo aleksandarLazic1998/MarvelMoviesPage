@@ -1,0 +1,18 @@
+@import '../../others/colors';
+@import '../../others/text';
+.header{
+    width:100vw;
+    height:10rem;
+    background-color: #2d3436;
+    background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+    display: flex;
+    justify-content: center;
+    
+    &-h1{
+        text-align: center;
+        color:$mercury;
+        align-self: center;
+        font-size: map-get($text_size , "large");
+        font-family: 'Times New Roman', Times, serif;
+    }
+}
