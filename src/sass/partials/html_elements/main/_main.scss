@@ -1,0 +1,15 @@
+.main{
+    background: rgb(255, 253, 253);
+    width: 1024px;
+    height: 100vh;
+    text-align: center;
+    display: grid;
+    margin: 0 auto;
+    &-div{
+
+        &-div-ul{
+            list-style-type: none;
+
+        }
+    }
+}
