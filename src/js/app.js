@@ -45,6 +45,55 @@ function changeYear() {
 
 }
 
+// This function will change styles of css that will make icon look like they can like and dislike
+
+const icons = document.querySelectorAll('.icons');
+const like = document.querySelectorAll('i.fa-heart-o');
+const bookmark = document.querySelectorAll('i.fa-bookmark-o');
+
+let clicked = false;
+
+
+ icons.forEach(icon=>{
+   icon.addEventListener('click',function(event) {
+
+  
+    if(clicked === false){
+      if(event.target.classList.value === 'fa fa-heart-o'){
+        event.target.style.color = 'red';
+        event.target.classList.remove('fa-heart-o');
+        event.target.classList.add('fa-heart');
+      }
+      else if(event.target.classList.value === 'fa fa-bookmark-o'){
+        event.target.style.color = 'black';
+        event.target.classList.remove('fa-bookmark-o');
+        event.target.classList.add('fa-bookmark');
+      }
+
+      clicked = true;
+    }else{
+      if(event.target.classList.value === 'fa fa-heart'){
+        event.target.style.color = 'none';
+        event.target.classList.remove('fa-heart');
+        event.target.classList.add('fa-heart-o');
+      }
+      else if(event.target.classList.value === 'fa fa-bookmark'){
+        event.target.style.color = 'none';
+        event.target.classList.remove('fa-bookmark');
+        event.target.classList.add('fa-bookmark-o');
+      }
+  
+      clicked = false;
+    }
+ })
+
+ },false);
+  
+
+
+
+
+
 
 // This function was made to later refacturate it in another js fragment
 navBar();
@@ -52,3 +101,5 @@ navBar();
 toggleMenuBar()
 // For seting the year
 changeYear();
+// // For Liking and disliking and bookmark and unbookmark
+// likeBookmark();

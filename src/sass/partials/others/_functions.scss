@@ -2,3 +2,7 @@
 @mixin transition-ease {
     transition: all 0.7s ease-in-out;
 }
+
+@mixin transition-ease-img {
+    transition: all 2s ease-in-out;
+}

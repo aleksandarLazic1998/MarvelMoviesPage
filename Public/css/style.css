@@ -220,10 +220,12 @@ body {
   height: 100%;
   text-align: center;
   margin: 0 auto;
+  margin-bottom: 50px;
 }
 .main-ul {
   list-style-type: none;
   display: grid;
+  grid-gap: 10px;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-template-rows: minmax(300px, 1fr);
   padding: 10px;
@@ -240,15 +242,42 @@ body {
   opacity: 50%;
   cursor: pointer;
   border: 1px solid black;
+  transition: all 0.7s ease-in-out;
+  filter: blur(1px);
 }
 .main-ul-li-card-img img:hover {
   opacity: 100%;
+  filter: none;
 }
-
-ul.main-ul > li {
-  background: #EDE7F6;
-  padding: 1.5rem;
-  border-radius: 1rem;
+.main-ul-li-card-under-img {
+  width: 100%;
+  height: 150px;
+}
+.main-ul-li-card-under-img .movie-name {
+  font-size: 25px;
+  font-family: Arial, sans-serif;
+  font-style: bolder;
+  text-align: center;
+}
+.main-ul-li-card-under-img .movie-information {
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-style: normal;
+  text-align: left;
+  padding: 0 5px;
+}
+.main-ul-li-card-under-img .icons {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  cursor: pointer;
+}
+.main-ul-li-card-under-img .icons .clicked {
+  color: black;
+}
+.main-ul-li-card-under-img .icons i.fa {
+  font-size: 20px;
+  padding: 10px;
 }
 
 .container-grid {
