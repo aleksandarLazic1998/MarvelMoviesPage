@@ -8,9 +8,9 @@ use App\Models\Marvel;
 class APIController extends BaseController
 {
     public function index() {
-        $res = Marvel::call('/characters');
+        $res = Marvel::call( '/characters' );
 
-        return response()->json($res->body);
+        return response()->json( $res->body );
     }
 
     public function show( $id ) {

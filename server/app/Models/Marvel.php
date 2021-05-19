@@ -10,7 +10,7 @@ use PhpParser\Node\Stmt\TryCatch;
 class Marvel {
     private static $timestamp;
 
-    public static function call($params) {
+    public static function call( $params ) {
         try {
             $result =  Unirest::get( env('MARVEL_API_URL') . $params . self::generate_url() );
 
