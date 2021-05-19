@@ -1,5 +1,5 @@
-@import '../../others/functions';
-@import '../../others/colors';
+@import 'shared/functions';
+@import 'shared/colors';
 
 // Media queryes for screen under 780px
 @media screen and (max-width: 780px) {
@@ -63,8 +63,9 @@
             flex-direction: column-reverse;
             align-items: center;
             justify-content: center;
-            height: 100vh;
-            z-index: 300;
+            height: 200vh;
+            background-color: $mine-shaft;
+            z-index: 300000;
             list-style-type: none;
             transform: translateY(+20%);
             overflow: hidden;
@@ -75,6 +76,7 @@
             &.open{
                 visibility: visible;
                 transform: translateY(0%);
+               
             }
 
             &-li{ 
