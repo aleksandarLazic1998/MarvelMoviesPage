@@ -1,6 +1,6 @@
-@import '../../others/colors';
-@import '../Nav/media-for-nav';
-@import '../../others/functions';
+@import 'shared/colors';
+@import 'media-for-nav';
+@import 'shared/functions';
 
 // This scss partial was made for styling navbar
 .navigation {

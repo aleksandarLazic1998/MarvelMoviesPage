@@ -62,8 +62,9 @@ body {
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    z-index: 300;
+    height: 200vh;
+    background-color: #2E2E2E;
+    z-index: 300000;
     list-style-type: none;
     transform: translateY(20%);
     overflow: hidden;
