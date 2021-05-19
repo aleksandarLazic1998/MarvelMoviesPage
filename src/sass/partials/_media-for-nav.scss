@@ -6,7 +6,7 @@
     .navigation {
     width:100vw;
         // Span that make the left side of the navigation bar menu
-        &-burger {
+        &__burger {
             visibility: visible;
             position: absolute;
             top: 40px;
@@ -79,7 +79,7 @@
                
             }
 
-            &-li{ 
+            &__li{ 
                 visibility: hidden;
                 @include transition-ease;
                 width: 100%;
@@ -98,7 +98,7 @@
         }
 
         @for $i from 1 through 3 {
-            .left-ul-nav-li:nth-child(#{$i}) {
+            .left-ul-nav__li:nth-child(#{$i}) {
                 // For each li element to ease in in to the page 
                 transition-delay: ($i * 0.2) + 0.15s;
             }
