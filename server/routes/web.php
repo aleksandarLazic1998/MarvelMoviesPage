@@ -13,4 +13,5 @@
 | and give it the Closure to call when that URI is requested.
 |
 */
-$router->get('/', 'APIController@index');
+$router->get('/characters', 'APIController@index');
+$router->get('/characters/{id}', 'APIController@show');

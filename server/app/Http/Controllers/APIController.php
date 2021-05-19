@@ -10,6 +10,12 @@ class APIController extends BaseController
     public function index() {
         $res = Marvel::call('/characters');
 
-        return response()->json($res);
+        return response()->json($res->body);
+    }
+
+    public function show( $id ) {
+        $res = Marvel::call( '/characters/' . $id );
+
+        return response()->json( $res->body );
     }
 }
