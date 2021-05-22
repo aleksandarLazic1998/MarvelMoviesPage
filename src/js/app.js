@@ -98,8 +98,6 @@ icons.forEach(icon => {
   });
 }, false);
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
 let moduleImage = document.querySelectorAll('.module-image');
 let imageButton = document.querySelectorAll('.image-btn');
 
