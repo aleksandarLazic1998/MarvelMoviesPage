@@ -77,20 +77,19 @@ function liking() {
       }
     }
   }
-
-  // This function will change styles of css that will make icon look like they can like and dislike
   const icons = document.querySelectorAll('.icons');
-
   // For each icon on the screen 
   icons.forEach(icon => {
     icon.addEventListener('click', function (event) {
 
       if (clicked === false) {
+        // This function will change styles of css that will make icon look like they can like and dislike
 
         likeUnlike(event.target);
 
         clicked = true;
       } else {
+        // This function will change styles of css that will make icon look like they can like and dislike
         likeUnlike(event.target);
         clicked = false;
       }
