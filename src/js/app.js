@@ -50,63 +50,63 @@ function changeYear() {
 changeYear();
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // This function will add liking and disliking functionality
-function liking(){
-// This function will change element styles to represent like and bookmark
-function likeBookmark(element) {
-  let like = 'fa fa-heart-o';
-  let bookmark = 'fa fa-bookmark-o';
-  if (element.classList.value === like) {
-    element.style.color = 'red';
-    element.classList.remove('fa-heart-o');
-    element.classList.add('fa-heart');
-  } else if (element.classList.value === bookmark) {
-    element.style.color = 'black';
-    element.classList.remove('fa-bookmark-o');
-    element.classList.add('fa-bookmark');
-  }
-}
-// This function will change elements styles to represent unlike and un booking
-function unlikeBokmark(element) {
-  let unLike = 'fa fa-heart';
-  let unBook = 'fa fa-bookmark';
-  if (element.classList.value === unLike) {
-    element.style.color = 'none';
-    element.classList.remove('fa-heart');
-    element.classList.add('fa-heart-o');
-  } else if (element.classList.value === unBook) {
-    element.style.color = 'none';
-    element.classList.remove('fa-bookmark');
-    element.classList.add('fa-bookmark-o');
-  }
-}
-// This function will change styles of css that will make icon look like they can like and dislike
-const icons = document.querySelectorAll('.icons');
-const like = document.querySelectorAll('i.fa-heart-o');
-const bookmark = document.querySelectorAll('i.fa-bookmark-o');
+function liking() {
+  // This function will be called when the like or bookmark button and it will decide to like and bookmark or unlike and unbook based on the class names 
+  function likeUnlike(element) {
+    if (element.classList.value.endsWith('o')) {
 
-// For each icon on the screen 
-icons.forEach(icon => {
-  icon.addEventListener('click', function (event) {
-    if (clicked === false) {
-      likeBookmark(event.target);
+      if (element.classList.value.includes('heart')) {
+        element.style.color = 'red';
+        element.classList.remove('fa-heart-o');
+        element.classList.add('fa-heart');
+      } else if (element.classList.value.includes('bookmark')) {
+        element.style.color = 'black';
+        element.classList.remove('fa-bookmark-o');
+        element.classList.add('fa-bookmark');
+      }
+    } else if (!element.classList.value.endsWith('o')) {
 
-      clicked = true;
-    } else {
-      unlikeBokmark(event.target);
+      if (element.classList.value.includes('heart')) {
+        element.style.color = 'black';
+        element.classList.remove('fa-heart');
+        element.classList.add('fa-heart-o');
 
-      clicked = false;
+      } else if (element.classList.value.includes('bookmark')) {
+        element.classList.remove('fa-bookmark');
+        element.classList.add('fa-bookmark-o');
+      }
     }
-  });
-}, false);
+  }
+
+  // This function will change styles of css that will make icon look like they can like and dislike
+  const icons = document.querySelectorAll('.icons');
+  const like = document.querySelectorAll('i.fa-heart-o');
+  const bookmark = document.querySelectorAll('i.fa-bookmark-o');
+
+  // For each icon on the screen 
+  icons.forEach(icon => {
+    icon.addEventListener('click', function (event) {
+
+      if (clicked === false) {
+
+        likeUnlike(event.target);
+
+        clicked = true;
+      } else {
+        likeUnlike(event.target);
+        clicked = false;
+      }
+    });
+  }, false);
 }
 // For Liking and disliking
 liking();
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // This function will add functionality for opening image modulo and closing it
-function modules(){
+function modules() {
   let moduleImage = document.querySelectorAll('.module-image');
   let imageButton = document.querySelectorAll('.image-btn');
-  
+
   // This function will be called for images Event Listener and it will add class to image that is clicked and all buttons
   function openImage(event) {
     let image = event;
@@ -115,7 +115,7 @@ function modules(){
       imageButton[i].classList.add('open');
     }
   }
-  
+
   // This function will be called for images Event Listener and it will remove all classes from image and buttons
   function closeImageClick(event) {
     let image = event;
@@ -124,7 +124,7 @@ function modules(){
       imageButton[i].classList.remove('open');
     }
   }
-  
+
   // This function will be called in Event Lisener for buttons when the x btn is clicked and when the Escape button was pressed 
   // It will close opened image and button
   function closeAll() {
@@ -135,31 +135,31 @@ function modules(){
       moduleImage[i].classList.remove('open');
     }
   }
-  
+
   // Event Listener when you click the image
   imageButton.forEach(button => {
     button.addEventListener('click', function () {
       closeAll();
     });
   });
-  
+
   // Event Listener when you press Escape key button 
   document.addEventListener('keyup', function (event) {
     if (event.key === 'Escape') {
       closeAll();
     }
   });
-  
+
   // Event Listener for Images
   moduleImage.forEach(images => {
     images.addEventListener('click', function (event) {
       if (clicked === false) {
         openImage(event.target);
-  
+
         clicked = true;
       } else {
         closeImageClick(event.target);
-  
+
         clicked = false;
       }
     });
