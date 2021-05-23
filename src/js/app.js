@@ -113,7 +113,6 @@ function modules() {
       imageButton[i].classList.add('open');
     }
   }
-
   // This function will be called for images Event Listener and it will remove all classes from image and buttons
   function closeImageClick(event) {
     let image = event;
