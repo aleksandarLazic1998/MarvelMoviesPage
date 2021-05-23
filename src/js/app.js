@@ -80,8 +80,6 @@ function liking() {
 
   // This function will change styles of css that will make icon look like they can like and dislike
   const icons = document.querySelectorAll('.icons');
-  const like = document.querySelectorAll('i.fa-heart-o');
-  const bookmark = document.querySelectorAll('i.fa-bookmark-o');
 
   // For each icon on the screen 
   icons.forEach(icon => {
