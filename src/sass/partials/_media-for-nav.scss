@@ -1,12 +1,12 @@
-@import '../../others/functions';
-@import '../../others/colors';
+@import 'shared/functions';
+@import 'shared/colors';
 
 // Media queryes for screen under 780px
 @media screen and (max-width: 780px) {
     .navigation {
     width:100vw;
         // Span that make the left side of the navigation bar menu
-        &-burger {
+        &__burger {
             visibility: visible;
             position: absolute;
             top: 40px;
@@ -63,8 +63,9 @@
             flex-direction: column-reverse;
             align-items: center;
             justify-content: center;
-            height: 100vh;
-            z-index: 300;
+            height: 200vh;
+            background-color: $mine-shaft;
+            z-index: 300000;
             list-style-type: none;
             transform: translateY(+20%);
             overflow: hidden;
@@ -75,9 +76,10 @@
             &.open{
                 visibility: visible;
                 transform: translateY(0%);
+               
             }
 
-            &-li{ 
+            &__li{ 
                 visibility: hidden;
                 @include transition-ease;
                 width: 100%;
@@ -96,7 +98,7 @@
         }
 
         @for $i from 1 through 3 {
-            .left-ul-nav-li:nth-child(#{$i}) {
+            .left-ul-nav__li:nth-child(#{$i}) {
                 // For each li element to ease in in to the page 
                 transition-delay: ($i * 0.2) + 0.15s;
             }

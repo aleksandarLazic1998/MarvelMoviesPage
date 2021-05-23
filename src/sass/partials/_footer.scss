@@ -1,5 +1,5 @@
-@import '../../others/colors';
-@import '../../others/text';
+@import 'shared/colors';
+@import 'shared/text';
 
 .footer {
     width: 100vw;
@@ -12,7 +12,7 @@
     right: 0px;
     background: $mine-shaft;
 
-    &-p {
+    &__p {
         color: white;
         font-size: map-get($text_size, "normal");
         padding: 20px;
