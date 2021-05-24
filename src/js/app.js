@@ -16,7 +16,7 @@ function navBar() {
 }
 // This function was made to later refacturate it in another js fragment
 navBar();
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 // This function will add class .open to a span.burger that will make iut to rotate it and other..
 function toggleMenuBar() {
   const burger = document.querySelector('.navigation__burger');
@@ -39,7 +39,7 @@ function toggleMenuBar() {
 }
 // For showing menu button
 toggleMenuBar()
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 // This Function set the year on the copyRigth span
 function changeYear() {
   const year = document.getElementById('time');
@@ -48,7 +48,7 @@ function changeYear() {
 }
 // For seting the year
 changeYear();
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 // This function will add liking and disliking functionality
 function liking() {
   // This function will be called when the like or bookmark button and it will decide to like and bookmark or unlike and unbook based on the class names 
@@ -84,7 +84,6 @@ function liking() {
 
       if (clicked === false) {
         // This function will change styles of css that will make icon look like they can like and dislike
-
         likeUnlike(event.target);
 
         clicked = true;
@@ -98,7 +97,7 @@ function liking() {
 }
 // For Liking and disliking
 liking();
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 // This function will add functionality for opening image modulo and closing it
 function modules() {
   let moduleImage = document.querySelectorAll('.module-image');
@@ -163,4 +162,3 @@ function modules() {
 }
 // For clicking and closing modules from images
 modules();
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
